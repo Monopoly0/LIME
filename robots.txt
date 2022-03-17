@@ -1,49 +1,25 @@
 User-agent: *
 
 
-Disallow: /lime/categories/
-
-Disallow: /lime/tags/css/
-
 Disallow: /lime/
 
-Disallow: /lime/tags/html/
-
-Disallow: /lime/tags/markdown/
-
-Disallow: /lime/post/markdown-syntax/
+Disallow: /lime/post/nax-thm/
 
 Disallow: /lime/post/
 
-Disallow: /lime/series/
-
-Disallow: /lime/categories/syntax/
+Disallow: /lime/tags/steganagrophy/
 
 Disallow: /lime/tags/
 
-Disallow: /lime/categories/themes/
-
-Disallow: /lime/series/themes-guide/
-
-Disallow: /lime/tags/privacy/
-
-Disallow: /lime/post/rich-content/
-
-Disallow: /lime/tags/shortcodes/
-
-Disallow: /lime/post/placeholder-text/
-
-Disallow: /lime/tags/text/
-
-Disallow: /lime/post/math-typesetting/
-
-Disallow: /lime/tags/emoji/
-
-Disallow: /lime/post/emoji-support/
+Disallow: /lime/tags/web/
 
 Disallow: /lime/about/
+
+Disallow: /lime/categories/
 
 Disallow: /lime/contact/
 
 Disallow: /lime/tags/index/
+
+Disallow: /lime/series/
 

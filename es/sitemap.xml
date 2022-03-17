@@ -2,8 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://limeincofficial.github.io/lime/es/about/</loc>
+    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://limeincofficial.github.io/lime/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://limeincofficial.github.io/lime/es/about/"
+                />
+  </url><url>
     <loc>https://limeincofficial.github.io/lime/es/post/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +28,6 @@
                 />
   </url><url>
     <loc>https://limeincofficial.github.io/lime/es/categories/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -26,149 +37,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://limeincofficial.github.io/lime/es/categories/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/tags/css/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/tags/css/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/post/markdown-syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/post/markdown-syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/post/markdown-syntax/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/tags/html/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/tags/html/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/tags/markdown/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/series/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/series/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/categories/syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/categories/syntax/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/tags/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/categories/themes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/categories/themes/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/series/themes-guide/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/series/themes-guide/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/series/themes-guide/"
-                />
-  </url><url>
-    <loc>https://limeincofficial.github.io/lime/es/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://limeincofficial.github.io/lime/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://limeincofficial.github.io/lime/es/about/"
                 />
   </url><url>
     <loc>https://limeincofficial.github.io/lime/es/contact/</loc>
@@ -193,6 +61,42 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://limeincofficial.github.io/lime/es/tags/index/"
+                />
+  </url><url>
+    <loc>https://limeincofficial.github.io/lime/es/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://limeincofficial.github.io/lime/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://limeincofficial.github.io/lime/es/"
+                />
+  </url><url>
+    <loc>https://limeincofficial.github.io/lime/es/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://limeincofficial.github.io/lime/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://limeincofficial.github.io/lime/es/series/"
+                />
+  </url><url>
+    <loc>https://limeincofficial.github.io/lime/es/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://limeincofficial.github.io/lime/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://limeincofficial.github.io/lime/es/tags/"
                 />
   </url>
 </urlset>
