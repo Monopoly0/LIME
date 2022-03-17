@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="author" content="Lime .inc">
+
+
+
+  
+  <meta name="description" content="This box made use of web enumeration and obscure steganagrophy. ">
+  <meta name="keywords" content="[]">
+
+
+
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+  <base href="/lime">
+
+  <title>LIME.inc</title>
+
+  <link rel="canonical" href="https://limeincofficial.github.io/lime/post/nax-thm/">
+  
+
+  
+
+
+<link href="https://limeincofficial.github.io/lime/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<link href="https://limeincofficial.github.io/lime/vendor/nes-style/css/nes.min.css" rel="stylesheet" />
+
+
+<link rel="stylesheet" href="https://limeincofficial.github.io/lime/css/bundle.min.d49afd00cf5df05be3c0cca664206dfa218cfc41d703886fe78201f755d87d76ff067731cf312bdb95b6afcb0c4dd730c5cdee9fc2ebc0cddfc76762f1d332e4.css" integrity="sha512-1Jr9AM9d8FvjwMymZCBt&#43;iGM/EHXA4hv54IB91XYfXb/BncxzzEr25W2r8sMTdcwxc3un8LrwM3fx2di8dMy5A==">
+
+
+  <meta property="og:title" content="Nax Try Hack Me Writeup" />
+<meta property="og:description" content="This box made use of web enumeration and obscure steganagrophy. " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://limeincofficial.github.io/lime/post/nax-thm/" /><meta property="og:image" content="https://limeincofficial.github.io/lime/site-feature-image.jpg"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-03-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-03-17T00:00:00+00:00" /><meta property="og:site_name" content="My cool site" />
+
+
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://limeincofficial.github.io/lime/site-feature-image.jpg"/>
+
+<meta name="twitter:title" content="Nax Try Hack Me Writeup"/>
+<meta name="twitter:description" content="This box made use of web enumeration and obscure steganagrophy. "/>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</head>
+
+
+<body class="bg-dark text-light  parallax" data-parallax-speed="10">
+  <header>
+  <div class="fixed-top p-5 bg-dark text-center">
+    <h1 class="nes-text">LIME.inc</h1>
+  </div>
+
+  
+  <nav>
+  <div class="container my-5 text-center">
+    <div class="row">
+      <div class="col">
+        
+  
+    
+  
+    
+  
+  
+    <span>
+      <a  href="https://limeincofficial.github.io/lime/">Home</a>
+    </span>
+    <span>/</span>
+  
+
+  
+  
+    <span>
+      <a  href="https://limeincofficial.github.io/lime/post/">Posts</a>
+    </span>
+    <span>/</span>
+  
+
+  
+  
+    
+  
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+</header>
+
+
+  <main aria-role="main">
+    
+<article>
+  <div class="container">
+
+    <div class="row mb-5">
+      <div class="col text-center">
+        <h1 class="nes-text is-primary">Nax Try Hack Me Writeup</h1>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center m-5 text-muted">
+      <small>
+        <time datetime="2022-03-17 00:00:00 &#43;0000 UTC">2022.03.17</time>
+        |
+        <span id="readingtime">~3 minutes</span>
+      </small>
+    </div>
+  
+    <div class="row mb-5">
+      <div class="col">
+        <h1 id="thm--nax">THM- NAX</h1>
+<h2 id="overview">Overview</h2>
+<p>![image](/images/Screen Shot 2022-03-17 at 12.02.35 AM.png)
+This box made use of web enumeration and obscure steganagrophy. There wasn&rsquo;t much post exploit to be done making it a pretty start to finish box once finding a foothold.</p>
+<h2 id="notable-scans">Notable Scans</h2>
+<p><a href="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_index.html">https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_index.html</a>
+<a href="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_nmap.txt">https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_nmap.txt</a>
+<a href="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/_full_tcp_nmap.txt">https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/_full_tcp_nmap.txt</a></p>
+<h2 id="road-to-user">Road to User</h2>
+<p>The first thing I did was to see if there was a webserver running.
+![image](Screen Shot 2022-03-17 at 12.15.02 AM.png)
+I checked if <code>/nagiosxi</code> was a subdirectory of the webserver and got a 301. I&rsquo;ll start a dir enum scan and keep the dir in the back of my mind for the time being. The other thing I noticed was the string in the middle of the webpage.
+![image](/images/Screen Shot 2022-03-17 at 12.25.06 AM.png)</p>
+<h2 id="first-flag">First Flag</h2>
+<p>Writing down the numbers of the elements and inputing the string into an ascii to text convertor leads to the first flag
+![image](/images/Screen Shot 2022-03-17 at 12.33.28 AM.png)</p>
+<p>Once we navigate to this directory we are greeted with a very obscure picture. Once we download the image and use an exiftool to see if there is any intresting metadata we find the second flag.
+![image](/images/Screen Shot 2022-03-17 at 12.36.52 AM.png)</p>
+<p>Checking back in with our dir enum (using dirbuster) I visited the webapp and navigated to the login page.</p>
+<p>![image](/images/Screen Shot 2022-03-17 at 1.00.06 AM.png)</p>
+<p>I tried the default username and password. I also tried combinations of previous strings and usernames found with no avail. I wanted to used bruteforcing as a last resort, so I looked elsewhere .I went back to the picture since it looked very odd. It was also my only lead at the time since there were no exploits to get past the login page. A popular list of resources for stego to refer to is <a href="https://0xrick.github.io/lists/stego/#tools">https://0xrick.github.io/lists/stego/#tools</a> .</p>
+<p>One thing that caught my eye was the programming language named Piet. The language was named after, Piet {redacted}, so after some searching I came accross this site called: <a href="https://www.bertnase.de/npiet/npiet-execute.php">https://www.bertnase.de/npiet/npiet-execute.php</a> . I uploaded the piet file and retrieved the credentials (the password is after the % btw). Apparently the defualt login username was the new one, I thought it was gonna be one we discover after gaining access to the admin controls XD. So there goes flags 3 &amp; 4.
+![[/images/Screen Shot 2022-03-17 at 1.31.36 AM.png]]</p>
+<p>The 5th flag was the CVE associated with the metasploit module I&rsquo;d use to exploit the box. The path of the metasploit module is the 6th flag. <code>linux/http/&lt;redacted?&gt;</code></p>
+<p>While it is always good practice to use the exploit code itself instead of using a metasploit module, we will be using the module for the since the challenege specifically states the use of the module.
+![image](/images/Screen Shot 2022-03-17 at 2.05.47 AM.png)</p>
+<p>Here is the output of the metasploit module I ran:</p>
+<p>![image](/images/Screen Shot 2022-03-17 at 2.14.08 AM.png)</p>
+<p>And it turns out we were given root upon execution :)
+![image](/images/Screen Shot 2022-03-17 at 2.14.53 AM.png)</p>
+<p>Now all you have to do is find the flags on the box.</p>
+<p>User:
+![image](/images/Screen Shot 2022-03-17 at 2.23.36 AM.png)
+Root:
+![image](/images/Screen Shot 2022-03-17 at 2.17.20 AM.png)</p>
+
+<style>
+.canon { background: white; width: 100%; height: auto; }
+</style>
+
+
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col text-end text-right">
+        By:  <em>Lime .inc</em>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<aside id="meta">
+  
+  <div class="d-flex justify-content-center m-5">
+    
+    <a class="nes-badge mx-3" href="https://limeincofficial.github.io/lime/tags/web" rel="tag">
+      <span class="is-primary">web</span>
+    </a>
+    
+    <a class="nes-badge mx-3" href="https://limeincofficial.github.io/lime/tags/steganagrophy" rel="tag">
+      <span class="is-primary">steganagrophy</span>
+    </a>
+    
+  </div>
+  
+
+  
+
+  
+  <section id="comments">
+    <div class="d-flex justify-content-center m-5">
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-limeincofficial-github-io-lime" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'https-limeincofficial-github-io-lime';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div>
+  </section>
+
+  
+  <div class="row d-flex justify-content-evenly m-5">
+    <div class="col-6 text-center">
+      <a class="nes-btn is-primary" href="https://limeincofficial.github.io/lime/post/">
+        Back
+      </a>
+    </div>
+
+    <div class="col-6 text-center">
+      <a class="nes-btn is-primary" href="https://limeincofficial.github.io/lime/">
+        Home
+      </a>
+    </div>
+  </div>
+
+</aside>
+
+  </main>
+
+  <footer>
+  <div class="fixed-bottom p-3 bg-dark text-muted text-center">
+    <small>
+      Copyright &copy; 2020-2022 - Lime .inc
+    </small>
+  </div>
+</footer>
+<script src="https://limeincofficial.github.io/lime/js/bundle.min.a05a720c034d37023e437164a9b1b96a46524be90dff41570e4f0fb2aa47afe76c231af65931effd71ac5b56babf7c835ae3115bd4a47d1cf3ba7d35d48f6005.js" integrity="sha512-oFpyDANNNwI&#43;Q3FkqbG5akZSS&#43;kN/0FXDk8PsqpHr&#43;dsIxr2WTHv/XGsW1a6v3yDWuMRW9SkfRzzun011I9gBQ=="></script>
+
+</body>
+
+</html>
