@@ -1,0 +1,25 @@
+User-agent: *
+
+
+Disallow: /lime/
+
+Disallow: /lime/post/nax-thm/
+
+Disallow: /lime/post/
+
+Disallow: /lime/tags/steganagrophy/
+
+Disallow: /lime/tags/
+
+Disallow: /lime/tags/web/
+
+Disallow: /lime/about/
+
+Disallow: /lime/categories/
+
+Disallow: /lime/contact/
+
+Disallow: /lime/tags/index/
+
+Disallow: /lime/series/
+
