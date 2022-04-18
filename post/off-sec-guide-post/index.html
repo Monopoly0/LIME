@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="author" content="Lime .inc">
+
+
+
+  
+  <meta name="description" content="Guide to get started into Offensive Security">
+  <meta name="keywords" content="[]">
+
+
+
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+  <base href="/lime">
+
+  <title>LIME.inc</title>
+
+  <link rel="canonical" href="https://limeincofficial.github.io/lime/post/off-sec-guide-post/">
+  
+
+  
+
+
+<link href="https://limeincofficial.github.io/lime/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<link href="https://limeincofficial.github.io/lime/vendor/nes-style/css/nes.min.css" rel="stylesheet" />
+
+
+<link rel="stylesheet" href="https://limeincofficial.github.io/lime/css/bundle.min.d49afd00cf5df05be3c0cca664206dfa218cfc41d703886fe78201f755d87d76ff067731cf312bdb95b6afcb0c4dd730c5cdee9fc2ebc0cddfc76762f1d332e4.css" integrity="sha512-1Jr9AM9d8FvjwMymZCBt&#43;iGM/EHXA4hv54IB91XYfXb/BncxzzEr25W2r8sMTdcwxc3un8LrwM3fx2di8dMy5A==">
+
+
+  <meta property="og:title" content="Starting Offensive Security Guide" />
+<meta property="og:description" content="Guide to get started into Offensive Security" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://limeincofficial.github.io/lime/post/off-sec-guide-post/" /><meta property="og:image" content="https://limeincofficial.github.io/lime/site-feature-image.jpg"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-17T00:00:00+00:00" /><meta property="og:site_name" content="My cool site" />
+
+
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://limeincofficial.github.io/lime/site-feature-image.jpg"/>
+
+<meta name="twitter:title" content="Starting Offensive Security Guide"/>
+<meta name="twitter:description" content="Guide to get started into Offensive Security"/>
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+</head>
+
+
+<body class="bg-dark text-light  parallax" data-parallax-speed="10">
+  <header>
+  <div class="fixed-top p-5 bg-dark text-center">
+    <h1 class="nes-text">LIME.inc</h1>
+  </div>
+
+  
+  <nav>
+  <div class="container my-5 text-center">
+    <div class="row">
+      <div class="col">
+        
+  
+    
+  
+    
+  
+  
+    <span>
+      <a  href="https://limeincofficial.github.io/lime/">Home</a>
+    </span>
+    <span>/</span>
+  
+
+  
+  
+    <span>
+      <a  href="https://limeincofficial.github.io/lime/post/">Posts</a>
+    </span>
+    <span>/</span>
+  
+
+  
+  
+    
+  
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+</header>
+
+
+  <main aria-role="main">
+    
+<article>
+  <div class="container">
+
+    <div class="row mb-5">
+      <div class="col text-center">
+        <h1 class="nes-text is-primary">Starting Offensive Security Guide</h1>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center m-5 text-muted">
+      <small>
+        <time datetime="2022-04-17 00:00:00 &#43;0000 UTC">2022.04.17</time>
+        |
+        <span id="readingtime">~4 minutes</span>
+      </small>
+    </div>
+  
+    <div class="row mb-5">
+      <div class="col">
+        <h2 id="foreword">Foreword</h2>
+<p>A lot of people have a very clear misconception on what it takes to excel in off-sec, what off-sec is comprised off, and what to do to learn off-sec. I won&rsquo;t read you a defenition, but know that if you find the idea of writing constantly and reading constantly boring this is the wrong proffession. A friend of mine who works as a red teamer summarizes this neatly, &ldquo;Its half writing and half doing, but mostly writing.&rdquo; This doesn&rsquo;t even encompass how much reading/learning you&rsquo;ll be undertaking on your own to finally get to that stage in your off-sec career. If your reading this post you&rsquo;re at least somewhat interested into what this field has to offer, so here is a plan to go from 0 to hero off-sec style.</p>
+<h2 id="absolute-basics">Absolute basics.</h2>
+<p>If you already work in the IT field or have these down (so you think right) you can skip this. Hacking systems requires complete knowledge on what comprises them to even get started exploiting. I like to refer to the five pillars when talking to people who are completely new. (<a href="https://dfirmadness.com/getting-into-infosec/the-five-pillars/)">https://dfirmadness.com/getting-into-infosec/the-five-pillars/)</a>. You also want to connect yourself into the community, trusted sec has a good list of resources for immersion purposes (<a href="https://www.trustedsec.com/blog/breaking-into-infosec-a-beginners-guide-part-1/)">https://www.trustedsec.com/blog/breaking-into-infosec-a-beginners-guide-part-1/)</a>. Discord is right now the most modern way to connect with like-minded indiviuals, you can go IRC if your&rsquo;re feeling nostalgic, here is a good list of discord servers (<a href="https://medium.com/@KillSwitchX7/cyber-security-discord-servers-7d9c0b7cd7cb)">https://medium.com/@KillSwitchX7/cyber-security-discord-servers-7d9c0b7cd7cb)</a>.</p>
+<h2 id="off-sec-basics">Off-Sec Basics</h2>
+<p>We&rsquo;ll go over some practical stuff before we get into the learning:</p>
+<ol>
+<li>Set up your dedicated machine for working. This should be virtualized using your chosen software (vmware, virtual box, or kvm if you have no clue what I&rsquo;m talking about). You have your choice of linux flavors to use. I&rsquo;d reccomend parrot OS, kali linux, or for you to setup your own based on debian. I have my personal work machine detalied on my git (<a href="https://github.com/LimeIncOfficial/Black-Box">https://github.com/LimeIncOfficial/Black-Box</a>)</li>
+<li>Set up your notes. Like I side before you&rsquo;ll be writing a lot, so lets keep it organized and readable. I use Obsidian and Cherrytree since they&rsquo;re stored on disk only and are relatively secure. You can also use trillium, notion,and zim. I also use graph.io for mind maps and libre office for anything more serious.</li>
+<li>Secure/Harden your system. Based on your OS steps to do this vary, so search up guides based on your system and follow them. Practices you should follow are universal. Use a password manager (KeePass), Secure Email Client (ThunderBird), VPN, Good Browser (TOR and hardened LibreWolf), update constantly, and don&rsquo;t do sketchy shit.</li>
+<li>Set up your digital profile. Create a new email without any ties to yourself. Same thing with your discord, and any new online account you&rsquo;ll be making in the future. OpSec and off-sec go hand in hand. Learn good habits now. Only thing that should be public are: your linkedIn. If you create content this varies. Also create a github and if your feeling brave create a blog (it can be hosted on github for ease of use).</li>
+</ol>
+<h2 id="off-sec-learning">Off-Sec Learning</h2>
+<p>Obviously you&rsquo;ll be hitting the books for quite a bit. Shoot for the EJPT when starting out, you can do the free course work at INE. Once your done with that, get comfortable doing CTF(s). Here is a good list of sites (<a href="https://ctfsites.github.io">https://ctfsites.github.io</a>). Make sure whenever your doing CTF(s) you are writing up the engagement. Here is an outline for obsidian (<a href="https://github.com/Twigonometry/OSCP-Notes-Template)">https://github.com/Twigonometry/OSCP-Notes-Template)</a>, A good doc creator (<a href="https://github.com/noraj/OSCP-Exam-Report-Template-Markdown)">https://github.com/noraj/OSCP-Exam-Report-Template-Markdown)</a>, and a markdown template (<a href="https://github.com/d0n601/HTB_Writeup-Template/blob/master/HTB_Writeup-TEMPLATE-d0n601.md">https://github.com/d0n601/HTB_Writeup-Template/blob/master/HTB_Writeup-TEMPLATE-d0n601.md</a>)</p>
+<p>I cannot stress how important doing CTF(s) and writing them up is. Next shoot for some certs, here is a good article outling some (<a href="https://redteamer.tips/so-you-want-to-be-a-pentester-and-or-red-teamer/)">https://redteamer.tips/so-you-want-to-be-a-pentester-and-or-red-teamer/)</a>. The OSCP is a good one, but the popularity is diminishing so keep your eye on emerging industry certs. I&rsquo;d still get it if you had the chance nonethless.</p>
+<p>Start networking too. Make friends, form groups, compete in teams and learn how to work together on challenges and engagements outside of just yourself. People forget a lot of the times that its not always just you working on assignment.</p>
+<p>Start creating stuff too. I know this vauge, but it has to be said. The more you produce, the more you have to show. Have some projects running in tandem with your learning or even better to supplement. For example, if you are learning malware analysis, try writing your own POC on a concept your diving into.</p>
+<p>Create a home lab too. This can be done very easily and lets you accumulate experience that you can put on a resume, along with your writeups and certs I may add. You can do this via virtualization or just buy some rasberry pis and create a mini server to work with. If you have the money, invest in a server.</p>
+<h2 id="closing">Closing</h2>
+<p>That should be enough to get the ball rolling. Hopefully. Keep at it, don&rsquo;t give up and you&rsquo;ll be in the ranks soon enough.</p>
+
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col text-end text-right">
+        By:  <em>Lime .inc</em>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<aside id="meta">
+  
+  <div class="d-flex justify-content-center m-5">
+    
+    <a class="nes-badge mx-3" href="https://limeincofficial.github.io/lime/tags/guide" rel="tag">
+      <span class="is-primary">guide</span>
+    </a>
+    
+  </div>
+  
+
+  
+
+  
+  <section id="comments">
+    <div class="d-flex justify-content-center m-5">
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-limeincofficial-github-io-lime" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'https-limeincofficial-github-io-lime';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div>
+  </section>
+
+  
+  <div class="row d-flex justify-content-evenly m-5">
+    <div class="col-6 text-center">
+      <a class="nes-btn is-primary" href="https://limeincofficial.github.io/lime/post/">
+        Back
+      </a>
+    </div>
+
+    <div class="col-6 text-center">
+      <a class="nes-btn is-primary" href="https://limeincofficial.github.io/lime/">
+        Home
+      </a>
+    </div>
+  </div>
+
+</aside>
+
+  </main>
+
+  <footer>
+  <div class="fixed-bottom p-3 bg-dark text-muted text-center">
+    <small>
+      Copyright &copy; 2020-2022 - Lime .inc
+    </small>
+  </div>
+</footer>
+<script src="https://limeincofficial.github.io/lime/js/bundle.min.a05a720c034d37023e437164a9b1b96a46524be90dff41570e4f0fb2aa47afe76c231af65931effd71ac5b56babf7c835ae3115bd4a47d1cf3ba7d35d48f6005.js" integrity="sha512-oFpyDANNNwI&#43;Q3FkqbG5akZSS&#43;kN/0FXDk8PsqpHr&#43;dsIxr2WTHv/XGsW1a6v3yDWuMRW9SkfRzzun011I9gBQ=="></script>
+
+</body>
+
+</html>

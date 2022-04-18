@@ -1,15 +1,19 @@
 User-agent: *
 
 
-Disallow: /lime/
+Disallow: /lime/tags/guide/
 
-Disallow: /lime/post/nax-thm/
+Disallow: /lime/
 
 Disallow: /lime/post/
 
-Disallow: /lime/tags/steganagrophy/
+Disallow: /lime/post/off-sec-guide-post/
 
 Disallow: /lime/tags/
+
+Disallow: /lime/post/nax-thm/
+
+Disallow: /lime/tags/steganagrophy/
 
 Disallow: /lime/tags/web/
 
