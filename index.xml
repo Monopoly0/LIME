@@ -23,9 +23,9 @@
       <pubDate>Thu, 17 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://limeincofficial.github.io/lime/post/nax-thm/</guid>
-      <description>THM- NAX Overview ![image](/images/Screen Shot 2022-03-17 at 12.02.35 AM.png) This box made use of web enumeration and obscure steganagrophy. There wasn&amp;rsquo;t much post exploit to be done making it a pretty start to finish box once finding a foothold.
+      <description>THM- NAX Overview This box made use of web enumeration and obscure steganagrophy. There wasn&amp;rsquo;t much post exploit to be done making it a pretty start to finish box once finding a foothold.
 Notable Scans https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_index.html https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_nmap.txt https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/_full_tcp_nmap.txt
-Road to User The first thing I did was to see if there was a webserver running. ![image](Screen Shot 2022-03-17 at 12.15.02 AM.png) I checked if /nagiosxi was a subdirectory of the webserver and got a 301.</description>
+Road to User The first thing I did was to see if there was a webserver running. I checked if /nagiosxi was a subdirectory of the webserver and got a 301. I&amp;rsquo;ll start a dir enum scan and keep the dir in the back of my mind for the time being.</description>
     </item>
     
     <item>
