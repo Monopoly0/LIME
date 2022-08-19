@@ -11,7 +11,7 @@
 
 
   
-  <meta name="description" content="This box made use of web enumeration and obscure steganagrophy. ">
+  <meta name="description" content="A look into ways to circumvent Apple&#39;s System Integrity Protection">
   <meta name="keywords" content="[]">
 
 
@@ -40,7 +40,7 @@
 
   <title>LIME.inc</title>
 
-  <link rel="canonical" href="https://limeincofficial.github.io/lime/post/nax-thm/">
+  <link rel="canonical" href="https://limeincofficial.github.io/lime/post/sip-bypass/">
   
 
   
@@ -55,19 +55,19 @@
 <link rel="stylesheet" href="https://limeincofficial.github.io/lime/css/bundle.min.d49afd00cf5df05be3c0cca664206dfa218cfc41d703886fe78201f755d87d76ff067731cf312bdb95b6afcb0c4dd730c5cdee9fc2ebc0cddfc76762f1d332e4.css" integrity="sha512-1Jr9AM9d8FvjwMymZCBt&#43;iGM/EHXA4hv54IB91XYfXb/BncxzzEr25W2r8sMTdcwxc3un8LrwM3fx2di8dMy5A==">
 
 
-  <meta property="og:title" content="Nax Try Hack Me Writeup" />
-<meta property="og:description" content="This box made use of web enumeration and obscure steganagrophy. " />
+  <meta property="og:title" content="System Integrity Protection Bypass" />
+<meta property="og:description" content="A look into ways to circumvent Apple&#39;s System Integrity Protection" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://limeincofficial.github.io/lime/post/nax-thm/" /><meta property="og:image" content="https://avatars.githubusercontent.com/u/88994657?s=200&v=4"/><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-03-17T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-03-17T00:00:00+00:00" /><meta property="og:site_name" content="Lime Inc." />
+<meta property="og:url" content="https://limeincofficial.github.io/lime/post/sip-bypass/" /><meta property="og:image" content="https://avatars.githubusercontent.com/u/88994657?s=200&v=4"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-08-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-19T00:00:00+00:00" /><meta property="og:site_name" content="Lime Inc." />
 
 
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/88994657?s=200&v=4"/>
 
-<meta name="twitter:title" content="Nax Try Hack Me Writeup"/>
-<meta name="twitter:description" content="This box made use of web enumeration and obscure steganagrophy. "/>
+<meta name="twitter:title" content="System Integrity Protection Bypass"/>
+<meta name="twitter:description" content="A look into ways to circumvent Apple&#39;s System Integrity Protection"/>
 
 
   
@@ -140,13 +140,13 @@ if (!doNotTrack) {
 
     <div class="row mb-5">
       <div class="col text-center">
-        <h1 class="nes-text is-primary">Nax Try Hack Me Writeup</h1>
+        <h1 class="nes-text is-primary">System Integrity Protection Bypass</h1>
       </div>
     </div>
 
     <div class="d-flex justify-content-center m-5 text-muted">
       <small>
-        <time datetime="2022-03-17 00:00:00 &#43;0000 UTC">2022.03.17</time>
+        <time datetime="2022-08-19 00:00:00 &#43;0000 UTC">2022.08.19</time>
         |
         <span id="readingtime">~3 minutes</span>
       </small>
@@ -154,41 +154,38 @@ if (!doNotTrack) {
   
     <div class="row mb-5">
       <div class="col">
-        <h1 id="thm--nax">THM- NAX</h1>
-<h2 id="overview">Overview</h2>
-<p><!-- raw HTML omitted -->
-This box made use of web enumeration and obscure steganagrophy. There wasn&rsquo;t much post exploit to be done making it a pretty start to finish box once finding a foothold.</p>
-<h2 id="notable-scans">Notable Scans</h2>
-<p><a href="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_index.html">https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_index.html</a>
-<a href="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_nmap.txt">https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_nmap.txt</a>
-<a href="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/_full_tcp_nmap.txt">https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/_full_tcp_nmap.txt</a></p>
-<h2 id="road-to-user">Road to User</h2>
-<p>The first thing I did was to see if there was a webserver running.
-<!-- raw HTML omitted -->
-I checked if <code>/nagiosxi</code> was a subdirectory of the webserver and got a 301. I&rsquo;ll start a dir enum scan and keep the dir in the back of my mind for the time being. The other thing I noticed was the string in the middle of the webpage.
-<!-- raw HTML omitted --></p>
-<h2 id="first-flag">First Flag</h2>
-<p>Writing down the numbers of the elements and inputing the string into an ascii to text convertor leads to the first flag
-<!-- raw HTML omitted --></p>
-<p>Once we navigate to this directory we are greeted with a very obscure picture. Once we download the image and use an exiftool to see if there is any intresting metadata we find the second flag.
-<!-- raw HTML omitted --></p>
-<p>Checking back in with our dir enum (using dirbuster) I visited the webapp and navigated to the login page.</p>
+        <p><!-- raw HTML omitted --></p>
+<h2 id="whats-system-integrity-protection-sip-and-why-do-we-care">What&rsquo;s System Integrity Protection (SIP) and Why Do We Care?</h2>
+<p>According to Apple, &ldquo;System Integrity Protection is a security technology in OS X El Capitan and later that&rsquo;s designed to help prevent potentially malicious software from modifying protected files and folders on your Mac. System Integrity Protection restricts the root user account and limits the actions that the root user can perform on protected parts of the Mac operating system.</p>
+<p>Before System Integrity Protection, the root user had no permission restrictions, so it could access any system folder or app on your Mac. Software obtained root-level access when you entered your administrator name and password to install the software. That allowed the software to modify or overwrite any system file or app.&rdquo;</p>
+<p><strong>Apple also specefies what parts of system System Integrity Protection protects which are:</strong></p>
+<ul>
+<li><code>/System</code></li>
+<li><code>/usr</code></li>
+<li><code>/bin</code></li>
+<li><code>/sbin</code></li>
+<li><code>/var</code></li>
+<li>Apps that are pre-installed with OS X</li>
+</ul>
+<p><strong>Protected Paths and apps that third-party apps and installers can continue to write to include:</strong></p>
+<ul>
+<li><code>/Applications</code></li>
+<li><code>/Library</code></li>
+<li><code>/usr/local</code></li>
+</ul>
+<p>Also, &ldquo;System Integrity Protection is designed to allow modification of these protected parts only by processes that are signed by Apple and have special entitlements to write to system files, such as Apple software updates and Apple installers. Apps that you download from the Mac App Store already work with System Integrity Protection. Other third-party software, if it conflicts with System Integrity Protection, might be set aside when you upgrade to OS X El Capitan or later.&rdquo; It also helps prevent software from selecting a startup disk but thats not important right now for our current goals.</p>
+<p>;</p>
+<h2 id="sip-and-notarized-code">SIP and Notarized Code</h2>
+<p>With the introduction of notarized code Apple has pretty much made it standard to visit the security prefrences everytime they want to run un-notarized code. Any piece of software that doesn&rsquo;t have a valid code signature and isn&rsquo;t submitted via Apple&rsquo;s Xcode to be notarized will read as this:</p>
 <p><!-- raw HTML omitted --></p>
-<p>I tried the default username and password. I also tried combinations of previous strings and usernames found with no avail. I wanted to used bruteforcing as a last resort, so I looked elsewhere .I went back to the picture since it looked very odd. It was also my only lead at the time since there were no exploits to get past the login page. A popular list of resources for stego to refer to is <a href="https://0xrick.github.io/lists/stego/#tools">https://0xrick.github.io/lists/stego/#tools</a> .</p>
-<p>One thing that caught my eye was the programming language named Piet. The language was named after, Piet {redacted}, so after some searching I came accross this site called: <a href="https://www.bertnase.de/npiet/npiet-execute.php">https://www.bertnase.de/npiet/npiet-execute.php</a> . I uploaded the piet file and retrieved the credentials (the password is after the % btw). Apparently the defualt login username was the new one, I thought it was gonna be one we discover after gaining access to the admin controls XD. So there goes flags 3 &amp; 4.
-<!-- raw HTML omitted --></p>
-<p>The 5th flag was the CVE associated with the metasploit module I&rsquo;d use to exploit the box. The path of the metasploit module is the 6th flag. <code>linux/http/&lt;redacted?&gt;</code></p>
-<p>While it is always good practice to use the exploit code itself instead of using a metasploit module, we will be using the module for the since the challenege specifically states the use of the module.
-<!-- raw HTML omitted --></p>
-<p>Here is the output of the metasploit module I ran:</p>
+<p>Which Mac users are conditioned to ignore (Maybe if Apple replaced this with a Virus Total Scan attached users would actually pay attention to this). Apple doesn&rsquo;t like code on your system that doesn&rsquo;t go through the notarization proccess so they won&rsquo;t protect it with SIP. This also includes privelaged applications that are un-notarized.</p>
+<h2 id="exploiting-sip-misconfigurations">Exploiting SIP Misconfigurations</h2>
+<p>I initially discovered this exploit while messing with cheat engine and attacking web assembely. Attaching a debugger to Proccess&rsquo;s that were protected by SIP (including applications that existed outside of SIP&rsquo;s protected directories) was blocked by the system.</p>
 <p><!-- raw HTML omitted --></p>
-<p>And it turns out we were given root upon execution :)
-<!-- raw HTML omitted --></p>
-<p>Now all you have to do is find the flags on the box.</p>
-<p>User:
-<!-- raw HTML omitted -->
-Root:
-<!-- raw HTML omitted --></p>
+<p>Now if we do the same thing to a non-notarized application we can observe how SIP ignores protection measures regardless of privelages. For demo I&rsquo;ll run libreWolf from the application folder (a un-notarized piece of software) and try to attach my debugger to it.</p>
+<p><!-- raw HTML omitted --></p>
+<h2 id="potential">Potential</h2>
+<p>Malicious Agents with a foothold in the system as user could privelage escalate using SIP ignored non-notarized software as a gateway into root. Obviously this relies on a foothold on the system to be present. Apple could mitigate this with a simple update to allow for SIP protection to extend to non-notarized software as well. For now you can stop this midway by installing BlockBlock (<a href="https://objective-see.org/products/blockblock.html">https://objective-see.org/products/blockblock.html</a>) an open source tool by Objective-See to see whenever un-notarized code tries to launch and have the ability to block it before it runs.</p>
 
       </div>
     </div>
@@ -206,12 +203,8 @@ Root:
   
   <div class="d-flex justify-content-center m-5">
     
-    <a class="nes-badge mx-3" href="https://limeincofficial.github.io/lime/tags/web" rel="tag">
-      <span class="is-primary">web</span>
-    </a>
-    
-    <a class="nes-badge mx-3" href="https://limeincofficial.github.io/lime/tags/steganagrophy" rel="tag">
-      <span class="is-primary">steganagrophy</span>
+    <a class="nes-badge mx-3" href="https://limeincofficial.github.io/lime/tags/mac" rel="tag">
+      <span class="is-primary">Mac</span>
     </a>
     
   </div>

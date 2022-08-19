@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© Copyright Lime .inc All rights reserved.</copyright>
-    <lastBuildDate>Sun, 17 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://limeincofficial.github.io/lime/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://limeincofficial.github.io/lime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>System Integrity Protection Bypass</title>
+      <link>https://limeincofficial.github.io/lime/post/sip-bypass/</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://limeincofficial.github.io/lime/post/sip-bypass/</guid>
+      <description>What&amp;rsquo;s System Integrity Protection (SIP) and Why Do We Care? According to Apple, &amp;ldquo;System Integrity Protection is a security technology in OS X El Capitan and later that&amp;rsquo;s designed to help prevent potentially malicious software from modifying protected files and folders on your Mac. System Integrity Protection restricts the root user account and limits the actions that the root user can perform on protected parts of the Mac operating system.</description>
+    </item>
+    
     <item>
       <title>Starting Offensive Security Guide</title>
       <link>https://limeincofficial.github.io/lime/post/off-sec-guide-post/</link>
