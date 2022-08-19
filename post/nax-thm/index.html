@@ -154,41 +154,66 @@ if (!doNotTrack) {
   
     <div class="row mb-5">
       <div class="col">
-        <h1 id="thm--nax">THM- NAX</h1>
+        <h1 id="thm-nax">THM- NAX</h1>
 <h2 id="overview">Overview</h2>
-<p><!-- raw HTML omitted -->
-This box made use of web enumeration and obscure steganagrophy. There wasn&rsquo;t much post exploit to be done making it a pretty start to finish box once finding a foothold.</p>
+<p><img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%2012.02.35%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" />
+This box made use of web enumeration and obscure steganagrophy. There wasn&#39;t much post exploit to be done making it a pretty start to finish box once finding a foothold. </p>
 <h2 id="notable-scans">Notable Scans</h2>
 <p><a href="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_index.html">https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_index.html</a>
 <a href="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_nmap.txt">https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/tcp_80_http_nmap.txt</a>
 <a href="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/_full_tcp_nmap.txt">https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/results/10.10.91.116/scans/_full_tcp_nmap.txt</a></p>
 <h2 id="road-to-user">Road to User</h2>
-<p>The first thing I did was to see if there was a webserver running.
-<!-- raw HTML omitted -->
-I checked if <code>/nagiosxi</code> was a subdirectory of the webserver and got a 301. I&rsquo;ll start a dir enum scan and keep the dir in the back of my mind for the time being. The other thing I noticed was the string in the middle of the webpage.
-<!-- raw HTML omitted --></p>
+<p>The first thing I did was to see if there was a webserver running. 
+<img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%2012.25.06%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" />
+I checked if <code>/nagiosxi</code> was a subdirectory of the webserver and got a 301. I&#39;ll start a dir enum scan and keep the dir in the back of my mind for the time being. The other thing I noticed was the string in the middle of the webpage.
+<img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%201.00.06%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" /></p>
 <h2 id="first-flag">First Flag</h2>
-<p>Writing down the numbers of the elements and inputing the string into an ascii to text convertor leads to the first flag
-<!-- raw HTML omitted --></p>
-<p>Once we navigate to this directory we are greeted with a very obscure picture. Once we download the image and use an exiftool to see if there is any intresting metadata we find the second flag.
-<!-- raw HTML omitted --></p>
-<p>Checking back in with our dir enum (using dirbuster) I visited the webapp and navigated to the login page.</p>
-<p><!-- raw HTML omitted --></p>
-<p>I tried the default username and password. I also tried combinations of previous strings and usernames found with no avail. I wanted to used bruteforcing as a last resort, so I looked elsewhere .I went back to the picture since it looked very odd. It was also my only lead at the time since there were no exploits to get past the login page. A popular list of resources for stego to refer to is <a href="https://0xrick.github.io/lists/stego/#tools">https://0xrick.github.io/lists/stego/#tools</a> .</p>
-<p>One thing that caught my eye was the programming language named Piet. The language was named after, Piet {redacted}, so after some searching I came accross this site called: <a href="https://www.bertnase.de/npiet/npiet-execute.php">https://www.bertnase.de/npiet/npiet-execute.php</a> . I uploaded the piet file and retrieved the credentials (the password is after the % btw). Apparently the defualt login username was the new one, I thought it was gonna be one we discover after gaining access to the admin controls XD. So there goes flags 3 &amp; 4.
-<!-- raw HTML omitted --></p>
-<p>The 5th flag was the CVE associated with the metasploit module I&rsquo;d use to exploit the box. The path of the metasploit module is the 6th flag. <code>linux/http/&lt;redacted?&gt;</code></p>
-<p>While it is always good practice to use the exploit code itself instead of using a metasploit module, we will be using the module for the since the challenege specifically states the use of the module.
-<!-- raw HTML omitted --></p>
-<p>Here is the output of the metasploit module I ran:</p>
-<p><!-- raw HTML omitted --></p>
-<p>And it turns out we were given root upon execution :)
-<!-- raw HTML omitted --></p>
-<p>Now all you have to do is find the flags on the box.</p>
-<p>User:
-<!-- raw HTML omitted -->
-Root:
-<!-- raw HTML omitted --></p>
+<p> Writing down the numbers of the elements and inputing the string into an ascii to text convertor leads to the first flag 
+<img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%2012.33.28%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" /></p>
+<p> Once we navigate to this directory we are greeted with a very obscure picture. Once we download the image and use an exiftool to see if there is any intresting metadata we find the second flag.
+<img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%2012.36.52%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" /></p>
+<p> Checking back in with our dir enum (using dirbuster) I visited the webapp and navigated to the login page.</p>
+<p><img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%201.00.06%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" /></p>
+<p> I tried the default username and password. I also tried combinations of previous strings and usernames found with no avail. I wanted to used bruteforcing as a last resort, so I looked elsewhere .I went back to the picture since it looked very odd. It was also my only lead at the time since there were no exploits to get past the login page. A popular list of resources for stego to refer to is <a href="https://0xrick.github.io/lists/stego/#tools">https://0xrick.github.io/lists/stego/#tools</a> . </p>
+<p> One thing that caught my eye was the programming language named Piet. The language was named after, Piet {redacted}, so after some searching I came accross this site called: <a href="https://www.bertnase.de/npiet/npiet-execute.php">https://www.bertnase.de/npiet/npiet-execute.php</a> . I uploaded the piet file and retrieved the credentials (the password is after the % btw). Apparently the defualt login username was the new one, I thought it was gonna be one we discover after gaining access to the admin controls XD. So there goes flags 3 &amp; 4. 
+<img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%201.31.36%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" /></p>
+<p> The 5th flag was the CVE associated with the metasploit module I&#39;d use to exploit the box. The path of the metasploit module is the 6th flag. <code>linux/http/&lt;redacted?&gt;</code></p>
+<p> While it is always good practice to use the exploit code itself instead of using a metasploit module, we will be using the module for the since the challenege specifically states the use of the module. 
+<img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%202.05.47%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" /></p>
+<p> Here is the output of the metasploit module I ran:</p>
+<p><img src="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/Nax.thm/Screen%20Shot%202022-03-17%20at%202.14.08%20AM.png?raw=true"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" /></p>
+<p> And it turns out we were given root upon execution :)
+ <img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%202.14.53%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" /></p>
+<p> Now all you have to do is find the flags on the box.</p>
+<p> User:
+<img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%202.23.36%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" />
+ Root:
+<img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/Nax.thm/Screen%20Shot%202022-03-17%20at%202.17.20%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" /></p>
+
 
       </div>
     </div>
