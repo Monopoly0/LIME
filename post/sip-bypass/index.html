@@ -154,7 +154,10 @@ if (!doNotTrack) {
   
     <div class="row mb-5">
       <div class="col">
-        <p><!-- raw HTML omitted --></p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/OS_X_security_layers.svg/1200px-OS_X_security_layers.svg.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" />
 <h2 id="whats-system-integrity-protection-sip-and-why-do-we-care">What&rsquo;s System Integrity Protection (SIP) and Why Do We Care?</h2>
 <p>According to Apple, &ldquo;System Integrity Protection is a security technology in OS X El Capitan and later that&rsquo;s designed to help prevent potentially malicious software from modifying protected files and folders on your Mac. System Integrity Protection restricts the root user account and limits the actions that the root user can perform on protected parts of the Mac operating system.</p>
 <p>Before System Integrity Protection, the root user had no permission restrictions, so it could access any system folder or app on your Mac. Software obtained root-level access when you entered your administrator name and password to install the software. That allowed the software to modify or overwrite any system file or app.&rdquo;</p>
@@ -174,16 +177,21 @@ if (!doNotTrack) {
 <li><code>/usr/local</code></li>
 </ul>
 <p>Also, &ldquo;System Integrity Protection is designed to allow modification of these protected parts only by processes that are signed by Apple and have special entitlements to write to system files, such as Apple software updates and Apple installers. Apps that you download from the Mac App Store already work with System Integrity Protection. Other third-party software, if it conflicts with System Integrity Protection, might be set aside when you upgrade to OS X El Capitan or later.&rdquo; It also helps prevent software from selecting a startup disk but thats not important right now for our current goals.</p>
-<p>;</p>
 <h2 id="sip-and-notarized-code">SIP and Notarized Code</h2>
 <p>With the introduction of notarized code Apple has pretty much made it standard to visit the security prefrences everytime they want to run un-notarized code. Any piece of software that doesn&rsquo;t have a valid code signature and isn&rsquo;t submitted via Apple&rsquo;s Xcode to be notarized will read as this:</p>
-<p><!-- raw HTML omitted --></p>
+<img src="https://media.idownloadblog.com/wp-content/uploads/2017/04/remove-open-program-dialog-before.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" />
 <p>Which Mac users are conditioned to ignore (Maybe if Apple replaced this with a Virus Total Scan attached users would actually pay attention to this). Apple doesn&rsquo;t like code on your system that doesn&rsquo;t go through the notarization proccess so they won&rsquo;t protect it with SIP. This also includes privelaged applications that are un-notarized.</p>
 <h2 id="exploiting-sip-misconfigurations">Exploiting SIP Misconfigurations</h2>
 <p>I initially discovered this exploit while messing with cheat engine and attacking web assembely. Attaching a debugger to Proccess&rsquo;s that were protected by SIP (including applications that existed outside of SIP&rsquo;s protected directories) was blocked by the system.</p>
-<p><!-- raw HTML omitted --></p>
+<img src="https://raw.githubusercontent.com/LimeIncOfficial/Blog-Repo/main/SIP%20Circumvet/Screen%20Shot%202022-08-19%20at%205.22.12%20AM.png"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" />
 <p>Now if we do the same thing to a non-notarized application we can observe how SIP ignores protection measures regardless of privelages. For demo I&rsquo;ll run libreWolf from the application folder (a un-notarized piece of software) and try to attach my debugger to it.</p>
-<p><!-- raw HTML omitted --></p>
+<img src="https://github.com/LimeIncOfficial/Blog-Repo/blob/main/SIP%20Circumvet/Screen%20Shot%202022-08-19%20at%205.39.03%20AM.png?raw=true"
+     alt="Markdown Monster icon"
+     style="width: auto; max-width: 100%; height: auto;" />
 <h2 id="potential">Potential</h2>
 <p>Malicious Agents with a foothold in the system as user could privelage escalate using SIP ignored non-notarized software as a gateway into root. Obviously this relies on a foothold on the system to be present. Apple could mitigate this with a simple update to allow for SIP protection to extend to non-notarized software as well. For now you can stop this midway by installing BlockBlock (<a href="https://objective-see.org/products/blockblock.html">https://objective-see.org/products/blockblock.html</a>) an open source tool by Objective-See to see whenever un-notarized code tries to launch and have the ability to block it before it runs.</p>
 
