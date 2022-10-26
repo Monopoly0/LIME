@@ -24,16 +24,16 @@ title: Lime                          # the main title
 tagline: A Offensive Security Organization  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  At the helm of adversary simulation, dedicated to strengthening infrastructure. 
+  At the helm of adversary simulation, dedicated to strengthening infrastructure.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: ''
 
 github:
-  username: github_username             # change to your github username
+  username: LimeIncOfficial             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: Lime_1ncOffical            # change to your twitter username
 
 social:
   # Change to your full name.
