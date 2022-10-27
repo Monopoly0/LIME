@@ -1,10 +1,16 @@
 ---
 title: Barclay's Red Team Entry Challenge (Delta)
 author: Lime
-date: 2022-10-26 14:10:00 +0800
-categories: [Writeup, Web, RE]
-tags: [ctf, reversing]
+date: '2022-10-26 14:10:00 +0800'
+categories:
+  - Writeup
+  - Web
+  - RE
+tags:
+  - ctf
+  - reversing
 render_with_liquid: false
+published: true
 ---
 ## Overview
 The machine didn't require any footholds into the actual box itself. It held a easy web challenege requiring no enumeration apart from active recon. The reversing aspect was a easy/low medium, with the hardest parts being leveraging the decryption function of the .net console application.
@@ -13,7 +19,6 @@ The machine didn't require any footholds into the actual box itself. It held a e
 
 The first thing I did was run passive scans on the given IP and look at the certificate. The certificate was a standard "LetsEncrypt"  had nothing meaningful. I did more DNS recon and nothing was to be found. 
 
-I also did some basic service enumeration and the box had ports tls/80 (http) and tls/443 (https) open with. The latter webpage being the start of the challenge. 
 
 ![Screen Shot 2022-08-17 at 12.55.04 AM.png](/assets/Screen Shot 2022-08-17 at 12.55.04 AM.png)
 
@@ -70,7 +75,7 @@ This I decided to look at the `public static Crypt.Crypto.Crypto` to see how the
 
 To our luck there is already a decrypt function making our job easier.  It looks like the string has 2 parts. the first being the RSA enryption then a colon splitting the second part which is AES encryption.  It does this by creating a string named `text` which contains the output of `System.Guid.NewGuid().ToString()` which creates a unique identifier according to (https://social.msdn.microsoft.com/Forums/en-US/3a8ef576-e02c-4ae5-b073-a4826a2d10d5/systemguidnewguidtostring?forum=aspdatasourcecontrols)
 
-![Screen Shot 2022-08-17 at 3.50.08 AM.png]({{site.baseurl}}/assets/Screen Shot 2022-08-17 at 3.50.08 AM.png)
+![Screen Shot 2022-08-17 at 3.50.08 AM.png](/assets/Screen Shot 2022-08-17 at 3.50.08 AM.png)
 
 
 Whith `ToString()` being our identifer of `"d"` Im fairly certain at least.  I'll explain a redundancy I placed just in case I was wrong later. It then encrypts that string with AES. Then our RSA encryption comes in and encrypts our inputted string using this function.
@@ -87,7 +92,7 @@ Using ILSpy's download code option I exported the bulk majority of the code and 
 
 There are a couple things we have to do before we can run this code though however.  We have to edit our project file.
 
-![Screen Shot 2022-08-17 at 4.05.38 AM.png]({{site.baseurl}}/assets/Screen Shot 2022-08-17 at 4.05.38 AM.png)
+![Screen Shot 2022-08-17 at 4.05.38 AM.png](/assets/Screen Shot 2022-08-17 at 4.05.38 AM.png)
 
 Add `<LangVersion>8.0</LangVersion>` because whenever I tried running the code it ran under C# version 7.3 for some reason. Another thing while we are here is my redundancy. I wasn't so sure in my theroy about the GUID function so I added this GUID that I found in ghidra while looking for string to my project file in lieu of the one it gave me just in case.
 
