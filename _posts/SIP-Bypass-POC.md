@@ -1,7 +1,4 @@
 ---
-published: true
----
----
 title: SIP Bypass POC
 author: Lime
 date: 2022-10-26 14:10:00 +0800
