@@ -3,7 +3,7 @@ published: true
 ---
 ---
 title: SIP Bypass POC
-author: cotes
+author: Lime
 date: 2022-10-26 14:10:00 +0800
 categories: [POC, Mac]
 tags: [mac, priv-esc]
@@ -63,5 +63,3 @@ Now if we do the same thing to a non-notarized application we can observe how SI
 ## Potential 
 
 Malicious Agents with a foothold in the system as user could privelage escalate using SIP ignored non-notarized software as a gateway into root. Obviously this relies on a foothold on the system to be present. Apple could mitigate this with a simple update to allow for SIP protection to extend to non-notarized software as well. For now you can stop this midway by installing BlockBlock (https://objective-see.org/products/blockblock.html) an open source tool by Objective-See to see whenever un-notarized code tries to launch and have the ability to block it before it runs.
-
-
