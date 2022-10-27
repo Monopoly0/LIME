@@ -1,10 +1,7 @@
 ---
-published: false
----
----
 title: Barclay's Red Team Entry Challenge (Delta)
 author: Lime
-date: 2022-10-26 14:10:00 +0800
+date: 2022-10-27 14:10:00 +0800
 categories: [Writeup, Web, RE]
 tags: [ctf, reversing]
 render_with_liquid: false
