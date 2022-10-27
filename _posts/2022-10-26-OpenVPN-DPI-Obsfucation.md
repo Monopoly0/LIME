@@ -1,7 +1,4 @@
 ---
-published: false
----
----
 title: OpenVPN (UDP) DPI Bypass
 date: 2022-10-26 14:10:00 +0800
 categories: [Networking]
