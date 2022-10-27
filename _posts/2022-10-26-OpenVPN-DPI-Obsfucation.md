@@ -20,14 +20,14 @@ This allows for `application data` to be filtered or blocked by DPI which is not
 
 Due to the cryptographic nature of OpenVPN, the TLS (1.2) handshake requires the Client Key to be transmitted in plain text to the OpenVPN server. Unfortunately because of that reason DPI is able to identify those said keys and block the `TLS Handshake` itself.
 
-![Screen Shot 2022-10-26 at 11.27.24 PM.png]({{site.baseurl}}/assets/Screen Shot 2022-10-26 at 11.27.24 PM.png)
+![Screen Shot 2022-10-26 at 11.27.24 PM.png](/assets/Screen Shot 2022-10-26 at 11.27.24 PM.png)
 
 
 ## How do we mask our traffic?
 
 To put it straight, you'd have to change the `udp` packet's application data (or in our case obsfucate the cryptographic keys) somehow, or you could use a encrypted connection to a machine outside DPI to handle any blocked networking. This would require some money or atleast setting up an VPS and or something similar to get working. 
 
-![Screen Shot 2022-10-26 at 11.46.23 PM.png]({{site.baseurl}}/assets/Screen Shot 2022-10-26 at 11.46.23 PM.png)
+![Screen Shot 2022-10-26 at 11.46.23 PM.png](/assets/Screen Shot 2022-10-26 at 11.46.23 PM.png)
 
 ## Bypassing DPI using Shadowsocks and UDPrelay along with OpenVPN
 
@@ -65,7 +65,7 @@ shadowsocks-libev -c ## PathToShadowsocksCONFIG -u --plugin PluginName
 
 Now when you connect to your openVPN server DPI should be unable to identify the TLS handshake. Here's a OpenVPN connection done in egypt just yesterday done in testing.
 
-![egyptpwn.png]({{site.baseurl}}/assets/egyptpwn.png)
+![egyptpwn.png](/assets/egyptpwn.png)
 
 
 
